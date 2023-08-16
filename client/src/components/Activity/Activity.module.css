@@ -1,0 +1,85 @@
+/* .activityContainer{
+
+} */
+
+.headerText{
+    border: 1px solid black;
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    color:white;
+    font-size: 20;
+    font-weight: 450;
+    padding: 1em;
+}
+.buttons {
+    display: flex;
+    gap: 20px;
+    
+}
+.activityCard{
+    background: linear-gradient(rgba(5, 7, 12, 0.9), rgba(53, 53, 53, 0.8));
+    border-radius: 8px;
+    width: 300px;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid white;
+    padding: 1px;
+    padding-left: 10px;
+    text-align: center;
+}
+
+.headerBox {
+    background-color: rgba(0, 0, 0, 0.1);
+    background: linear-gradient(rgba(5, 7, 12, 0.9), rgba(53, 53, 53, 0.8));
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-radius: 9px;
+    height: 100px;
+}
+
+
+.activityGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-gap: 20px;
+    justify-items: center;
+}
+
+.styleText {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 20;
+    font-weight: 450;
+    padding: 0.5em;
+  }
+  .button{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    border:none;
+    background:none;
+    height: 25px;
+    color:white;
+    position: relative;
+    margin-top: 15px;
+    padding: 0 10px 10px 10px;
+}
+.button:hover{
+    cursor: pointer;
+}
+.button::after{
+    content: "";
+    position: absolute;
+    background-color:rgb(255, 255, 255);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -0.5px;
+    transition: 0.3s;
+ }
+ .button:hover:after {
+    width: 100%;
+}

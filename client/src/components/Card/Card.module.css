@@ -1,0 +1,25 @@
+
+
+.cardStyle{
+    background: linear-gradient(rgba(5, 7, 12, 0.9), rgba(53, 53, 53, 0.8));
+    border-radius: 8px;
+    width: 300px;
+    overflow: show;
+    border: 1px solid white;
+    padding: 1px;
+    padding-left: 10px;
+    text-align: center;
+    height: 400px;
+}
+.link{
+    text-decoration: none;
+ }
+
+.styleCardName {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    font-size: 20;
+    font-weight: 450;
+    padding: 10px;
+  }

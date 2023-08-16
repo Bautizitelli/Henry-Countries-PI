@@ -1,0 +1,53 @@
+.detailContainer{
+    display: grid;
+    place-content: center;
+    margin-top: 10vh;
+}
+
+.imgStyle{
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.detailCard{
+    font-family: 'Roboto Mono', monospace;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    background: linear-gradient(rgba(5, 7, 12, 0.9), rgba(75, 75, 75, 0.8));
+    border-radius: 8px;
+    width: fit-content;
+    height: auto;
+    overflow: show;
+    border: 1px solid white;
+    padding:15px ;
+    color: white;
+}
+
+.button{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    border:none;
+    background:none;
+    height: 25px;
+    color:white;
+    position: relative;
+    margin-top: 15px;
+    padding: 0 10px 10px 10px;
+}
+.button:hover{
+    cursor: pointer;
+}
+.button::after{
+    content: "";
+    position: absolute;
+    background-color:rgb(255, 255, 255);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -0.5px;
+    transition: 0.3s;
+ }
+ .button:hover:after {
+    width: 100%;
+}

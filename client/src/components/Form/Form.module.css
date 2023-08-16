@@ -1,0 +1,104 @@
+
+.formContainer{
+    display: grid;
+    place-content: center;
+    margin-top: 15vh;
+}
+
+.formStyle{
+    background: linear-gradient(rgb(5, 7, 12), rgba(75, 75, 75, 0.9));
+    color: white;
+    border-radius: 8px;
+    border: 1px solid white;
+    width: 800px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    height: max-content;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.labelStyle{
+    flex: 1;
+    padding-top: 15px;
+    margin: 10px;
+    margin-right: 50px;
+    font-size: 18px;
+}
+.inputContainer {
+    display: flex;
+    align-items: center;
+  }
+
+.errorText{
+    color: red;
+    font-size: 15px;
+    margin: 0 auto;
+}
+.errorContainer {
+    flex:2;
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    flex: 2;
+    color:white;
+    font-family: 'Roboto Mono', monospace;
+    background: none;
+    border-radius: 5px;
+    border:1px solid white;
+    margin-top: 15px;
+    height: 25px;
+    font-size: 17px;
+}
+.countriesInput{
+    flex: 2;
+    color:white;
+    font-family: 'Roboto Mono', monospace;
+    height: 50px;
+    background: transparent;
+    border:1px solid white;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+}
+.button{
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    border:none;
+    background:none;
+    height: 25px;
+    color:white;
+    position: relative;
+    padding: 0 10px 10px 10px;
+    margin: 30px;
+}
+.button:hover{
+    cursor: pointer;
+}
+.button::after{
+    content: "";
+    position: absolute;
+    background-color:rgb(255, 255, 255);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+ }
+ .button:hover:after {
+    width: 100%;
+}
+
+.selectorOptions{
+    color: black;
+    border-radius: 5px;
+    background: transparent;   
+}
