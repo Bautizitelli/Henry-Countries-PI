@@ -19,6 +19,7 @@ const getCountryByName = async(req,res)=>{
         if(!name){
             const countries = await getAllCountries()
             return res.status(200).json(countries)
+            
         }else{
             const getByName = await countryByName(name)
             return res.status(200).json(getByName)

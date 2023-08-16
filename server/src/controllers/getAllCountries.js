@@ -6,6 +6,7 @@ const getAllCountries= async()=>{
         attributes: ["name","id","flag","continent","population"],
         include: Activity
     });
+    console.log(countries);
     return countries
 }
 
