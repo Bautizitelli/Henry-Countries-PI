@@ -10,12 +10,12 @@ function Cards(props){
     const selectedContinent = props.selectedContinent;
     const startIndex = currentPage * countriesPerPage;
 
+
     const dispatch = useDispatch();
     const sorting = useSelector((state)=>state.sorting);
 
     const handleContinentFilter = (event) => {
        const value = event.target.value;
-       console.log(updateContinentFilter(value));
        dispatch(updateContinentFilter(value))
       };
       
@@ -50,8 +50,8 @@ function Cards(props){
                     <button className={style.button} onClick={props.prevHandler}>Anterior</button>
                         <h1 className={style.pageCounter}>{props.currentPage + 1}</h1>
                     <button className={style.button}  onClick={props.nextHandler}>Siguiente</button>
-                    <select name="" onChange={handleContinentFilter} className={style.selector}>
-                        <option value="" className={style.selectorOptions} disabled>Continente</option>
+                    <select name="" onChange={handleContinentFilter} className={style.selector} value={selectedContinent}>
+                        <option value="default" className={style.selectorOptions} disabled>Continente</option>
                         <option value="Europe" className={style.selectorOptions}>Europe</option>
                         <option value="South America" className={style.selectorOptions}>South America</option>
                         <option value="North America" className={style.selectorOptions}>North America</option>

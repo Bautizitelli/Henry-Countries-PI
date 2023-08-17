@@ -79,7 +79,8 @@ function rootReducer(state = initialState,action){
                 sorting:{
                     ...state.sorting,
                     [action.payload.key]: action.payload.value
-                }
+                },
+                currentPage:0
             }    
             case CLEAR_FILTERS:
                 return {
@@ -96,7 +97,7 @@ function rootReducer(state = initialState,action){
                 return {
                     ...state,
                     selectedContinent: action.payload,
-                    
+                    currentPage:0
                 };    
         default:
             return state

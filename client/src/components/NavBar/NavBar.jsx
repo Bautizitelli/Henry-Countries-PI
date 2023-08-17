@@ -14,11 +14,12 @@ function NavBar(props){
             <Link to='/about'>
             <button className={style.button}>Countries P.I.</button>
             </Link>
-                <Link to='/activities/activity-list'>
-                    <button className={style.button}>Lista de actividades</button>
-                </Link>
+                
                 <Link to='/activities'>
                     <button className={style.button}>Agregar actividad</button>
+                </Link>
+                <Link to='/activities/activity-list'>
+                    <button className={style.button}>Lista de actividades</button>
                 </Link>
             <SearchBar
                 searchValue={props.searchValue}
