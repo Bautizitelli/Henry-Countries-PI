@@ -1,19 +1,7 @@
 :root {
   margin: 0;
   padding: 0;
-  background-image: url('zyro-image.png');
-  /* background-size:85%; */
+  background-image: url('fondo1.jpg');
   background-size:cover;
-  background-repeat:no-repeat;
-  background-position: center;
-  /* background-color:rgba(185, 185, 185, 0.815) ; */
-
-}
-.body{
-  /* margin: 0;
-  padding: 0;
-  background-image:url('/brujula.png');
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed; */
+  background-attachment: fixed;
 }

@@ -1,15 +1,12 @@
 .cardsStyle{
     display: grid;
     grid-template-columns: auto auto auto auto auto;
-    width: 92%;
+    width: 85%;
     margin: 0 auto;
-    gap: 50px;
-    padding: 5px;
+    gap: 30px;
+    padding: 25px;
     justify-content: center;
- }
-
-.cardsStyle :hover{
-    transform: scale(1.03); 
+    transition: transform 0.3s ease-in-out;
  }
 
  .selector{

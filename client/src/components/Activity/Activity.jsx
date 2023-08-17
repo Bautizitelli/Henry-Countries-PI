@@ -18,7 +18,6 @@ function ActivityList({ activities: initialActivities}){
     };
     useEffect(() => {
         getActivities();
-        console.log(getActivities());
     }, []);
 
     return (
@@ -26,7 +25,6 @@ function ActivityList({ activities: initialActivities}){
             <div className={style.headerBox}>
         <h1 className={style.headerText}>Actividades</h1>
         <div className={style.buttons}>
-        <button onClick={getActivities} className={style.button}>Actualizar</button>
         <Link to='/activities'>
                     <button className={style.button}>Agregar actividad</button>
                 </Link>

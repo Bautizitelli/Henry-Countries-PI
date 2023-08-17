@@ -34,9 +34,6 @@ function Form(){
 
     const handleSubmit= async(event)=>{
         event.preventDefault()
-        // console.log('submit');
-        // console.log(activity);
-        // console.log(errors);
         console.log('Datos para enviar:', {
             name: activity.name,
             duration: activity.duration,

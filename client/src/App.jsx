@@ -5,8 +5,7 @@ import Home from './components/Home/Home'
 import Form from './components/Form/Form'
 import Detail from './components/Detail/Detail'
 import ActivityList from "./components/Activity/Activity"
-
-import './App.css'
+import About from "./components/About/About"
 import { useState } from "react"
 
 function App() {
@@ -21,6 +20,7 @@ function App() {
         <Route path='/home/:idPais' element={<Detail/>}></Route>
         <Route path='/activities' element={<Form/>}></Route>
         <Route path='/activities/activity-list' element={<ActivityList/>}></Route>
+        <Route path='/about' element={<About/>} />
       </Routes>
       
     </>

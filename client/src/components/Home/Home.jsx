@@ -5,6 +5,7 @@ import { getFilteredAndSortedCountries } from "../../redux/selectors";
 import NavBar from "../NavBar/NavBar"
 import Cards from "../Cards/Cards"
 
+
 function Home(){
     
     const dispatch = useDispatch()
@@ -62,13 +63,6 @@ function Home(){
     useEffect(()=>{
         dispatch(getCountries());
     },[dispatch])
-
-    // useEffect(() => {
-    //     setCountriesList(currentPageCountries.slice(
-    //         currentPage * countriesPerPage,
-    //         (currentPage + 1) * countriesPerPage
-    //     ));
-    // }, [currentPageCountries, currentPage, countriesPerPage]);
 
     return(
         <div >

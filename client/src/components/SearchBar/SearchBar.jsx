@@ -12,12 +12,26 @@ function SearchBar(props){
 
     const [searchInput, setSearchInput] = useState('');
     const [showSearch, setShowSearch] = useState(false)
+    const [notFound, setNotFound] = useState(false);
 
-    const handleSearch =async()=>{
-       await dispatch(searchCountry(searchInput));
-       setShowSearch(true)
+    const handleSearch = async () => {
+      const formattedSearchInput = searchInput.charAt(0).toUpperCase() + searchInput.slice(1);
+      const result = await dispatch(searchCountry(formattedSearchInput));
+
+      if (result) {
+          setShowSearch(true);
+          setNotFound(false);
+      } else {
+          setShowSearch(true);
+          setNotFound(true);
+      }
+  };
+
+      const handleKeyPress = (event) => {
+        if (event.key === 'Enter') {
+            handleSearch();
+        }
     };
-
     useEffect(() => {
         if (location.pathname === '/home') {
           setShowSearch(false)
@@ -31,6 +45,7 @@ function SearchBar(props){
                     type="text"
                     value={searchInput}
                     onChange={(event)=> setSearchInput(event.target.value)}
+                    onKeyPress={handleKeyPress}
                     className={style.input}
                     placeholder='Escribe un país!'
                 />
@@ -39,9 +54,17 @@ function SearchBar(props){
                     onClick={handleSearch}
                     >Buscar</button>
             </div>
-              {foundCountryDetails.id !== undefined && showSearch &&(
-                <p className={style.link}>Ver detalle de <NavLink className={style.link} to={`/home/${foundCountryDetails.id}`}>{foundCountryDetails.name}</NavLink>!</p>
-                )}
+             {showSearch && (
+                <p className={style.link}>
+                    {notFound ? (
+                        <span>País no encontrado</span>
+                    ) : (
+                        <NavLink className={style.link} to={`/home/${foundCountryDetails.id}`}>
+                            Ver detalle de {foundCountryDetails.name}!
+                        </NavLink>
+                    )}
+                </p>
+            )}
         </div>
     )
   }

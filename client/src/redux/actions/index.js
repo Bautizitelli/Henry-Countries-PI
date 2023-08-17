@@ -10,32 +10,34 @@ export const UPDATE_SORTING = "UPDATE_SORTING"
 export const CLEAR_FILTERS = "CLEAR_FILTERS";
 export const CONTINENT_FILTER = "CONTINENT_FILTER"
 
-export function searchCountry(countryName){
-
-    return async (dispatch) => {
-        try {
+export function searchCountry(countryName) {
+  return async (dispatch) => {
+      try {
           const response = await axios.get(`http://localhost:3001/countries/?name=${countryName}`);
           const countryDetailsArray = response.data;
           if (countryDetailsArray.length > 0) {
-            const firstCountry = countryDetailsArray[0];
-            dispatch({
-              type: SEARCH_COUNTRY,
-              payload: firstCountry,
-            });
+              const firstCountry = countryDetailsArray[0];
+              dispatch({
+                  type: SEARCH_COUNTRY,
+                  payload: firstCountry,
+              });
+              return true;
           } else {
-            dispatch({
-              type: SEARCH_COUNTRY,
-              payload: null,
-            });
+              dispatch({
+                  type: SEARCH_COUNTRY,
+                  payload: null,
+              });
+              return false;
           }
-        } catch (error) {
+      } catch (error) {
           console.error('Error al buscar el país:', error);
           dispatch({
-            type: SEARCH_COUNTRY,
-            payload: null,
+              type: SEARCH_COUNTRY,
+              payload: null,
           });
-        }
-      };
+          return false; 
+      }
+  };
 }
 
 export function getCountryDetails(idPais){
@@ -108,7 +110,6 @@ export function prevPage(){
 }
 
 export function updateSorting(sorting){
-  console.log('LLega el sort:',sorting);
   return {
     type: UPDATE_SORTING,
     payload: sorting

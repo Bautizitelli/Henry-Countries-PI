@@ -2,6 +2,7 @@ import style from './NavBar.module.css'
 import { Link } from 'react-router-dom'
 import SearchBar from '../SearchBar/SearchBar'
 
+
 function NavBar(props){
     return(
         <div className={style.container}>
@@ -10,7 +11,9 @@ function NavBar(props){
                 className={style.topImage}
                 height={80}
             />
-            <h2 className={style.textStyle}>Countries P.I.</h2>
+            <Link to='/about'>
+            <button className={style.button}>Countries P.I.</button>
+            </Link>
                 <Link to='/activities/activity-list'>
                     <button className={style.button}>Lista de actividades</button>
                 </Link>

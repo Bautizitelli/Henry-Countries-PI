@@ -1,5 +1,4 @@
 import style from './Landing.module.css'
-import landingBackground from '../../assets/mapaColor.jpg'
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
