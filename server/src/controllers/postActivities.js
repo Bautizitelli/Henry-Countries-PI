@@ -30,8 +30,6 @@ const postActivities =async(name, difficulty, duration, season, countries)=>{
         console.error('Error al crear la actividad:', error);
         throw error
     }
-        //await activities.setCountries(countries)
-        //return activities
     }
 
 module.exports={

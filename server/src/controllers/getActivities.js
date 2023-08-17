@@ -5,7 +5,7 @@ const getActivities =async()=>{
         include: [
             {
                 model: Country,
-                attributes: ['name'], // Puedes elegir las propiedades que quieras mostrar del país
+                attributes: ['name'],
             },
         ],
     });

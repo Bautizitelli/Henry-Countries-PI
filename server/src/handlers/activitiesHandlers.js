@@ -13,6 +13,7 @@ const postActivity =async(req,res)=>{
     }
  }
 
+
  const getActivity =async(req,res)=>{
     try {
         const allActivities = await getActivities();
@@ -21,6 +22,7 @@ const postActivity =async(req,res)=>{
         res.status(500).json({ error: error.message });
     }
 }
+
 
 module.exports={
     getActivity,
